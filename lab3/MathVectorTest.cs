@@ -33,7 +33,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void LengthPropertyTest1()
+        public void LengthPropertyTestForPositiveValues()
         {
             // arrange
             var vector = new MathVector(3);
@@ -52,7 +52,7 @@ namespace MathVectorTest
         /// when all coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void LengthPropertyTest2()
+        public void LengthPropertyTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector = new MathVector(3);
@@ -71,7 +71,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void OperatorAddingOverloadTest1()
+        public void OperatorAddingOverloadTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -96,7 +96,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void OperatorAddingOverloadTest2()
+        public void OperatorAddingOverloadTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -121,7 +121,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void OperatorAddingOverloadTest3()
+        public void OperatorAddingOverloadTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -161,9 +161,9 @@ namespace MathVectorTest
             result = vector1 + vector2;
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void OperatorSubstructionOverloadTest1()
+        public void OperatorSubstructionOverloadTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -196,7 +196,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void OperatorSubstructionOverloadTest2()
+        public void OperatorSubstructionOverloadTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -221,7 +221,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void OperatorSubstructionOverloadTest3()
+        public void OperatorSubstructionOverloadTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -261,9 +261,9 @@ namespace MathVectorTest
             result = vector1 - vector2;
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void OperatorMultiplyOverloadTest1()
+        public void OperatorMultiplyOverloadTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -296,7 +296,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void OperationMultiplictaionOverloadTest2()
+        public void OperationMultiplictaionOverloadTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -321,7 +321,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void OperationMultiplicationOverloadTest3()
+        public void OperationMultiplicationOverloadTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -361,9 +361,9 @@ namespace MathVectorTest
             result = vector1 * vector2;
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -371,7 +371,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void OperatorDivisionOverloadTest1()
+        public void OperatorDivisionOverloadTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -397,7 +397,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void OpearatorDivisionOverloadTest2()
+        public void OpearatorDivisionOverloadTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -425,7 +425,7 @@ namespace MathVectorTest
         /// <exception cref="DivideByZeroException">Is thrown,
         /// when the second operand of the division operation is zero.</exception>
         [TestMethod]
-        public void OperatorDivisionOverloadTest3()
+        public void OperatorDivisionOverloadTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -474,9 +474,9 @@ namespace MathVectorTest
             result = vector1 / vector2;
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -484,7 +484,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void OperatorProcentOverloadTest1()
+        public void OperatorProcentOverloadTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -505,7 +505,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void OperatorProcentOverloadTest2()
+        public void OperatorProcentOverloadTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -526,7 +526,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void OperatorProcentOverloadTest3()
+        public void OperatorProcentOverloadTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -560,7 +560,7 @@ namespace MathVectorTest
             double result = vector1 % vector2;
 
             // assert
-            Assert.AreEqual(result, expected);
+            Assert.AreNotSame(result, expected);
         }
 
         /// <summary>
@@ -568,7 +568,7 @@ namespace MathVectorTest
         /// when the added number is positive.
         /// </summary>
         [TestMethod]
-        public void SumNumberMethodTest1()
+        public void SumNumberMethodTestForPositiveValues()
         {
             // arrange
             double number = 2.0;
@@ -592,7 +592,7 @@ namespace MathVectorTest
         /// when the added number is negative.
         /// </summary>
         [TestMethod]
-        public void SumNumberMethodTest2()
+        public void SumNumberMethodTestForPositiveValuesAndNegativeNumber()
         {
             // arrange
             double number = -2.0;
@@ -616,7 +616,7 @@ namespace MathVectorTest
         /// when the added number is zero.
         /// </summary>
         [TestMethod]
-        public void SumNumberMethodTest3()
+        public void SumNumberMethodTestForPositiveValuesAndZero()
         {
             // arrange
             double number = 0.0;
@@ -654,9 +654,9 @@ namespace MathVectorTest
             result = vector.SumNumber(number);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -664,7 +664,7 @@ namespace MathVectorTest
         /// when the multiplied number is positive.
         /// </summary>
         [TestMethod]
-        public void MultiplyNumberMethodTest1()
+        public void MultiplyNumberMethodTestForPositiveValues()
         {
             // arrange
             double number = 2.0;
@@ -688,7 +688,7 @@ namespace MathVectorTest
         /// when the multiplied number is negative.
         /// </summary>
         [TestMethod]
-        public void MultiplyNumberMethodTest2()
+        public void MultiplyNumberMethodTestForPositiveValuesAndNegativeNumber()
         {
             // arrange
             double number = -2.0;
@@ -712,7 +712,7 @@ namespace MathVectorTest
         /// when the multiplied number is zero.
         /// </summary>
         [TestMethod]
-        public void MultiplyNumberMethodTest3()
+        public void MultiplyNumberMethodTestForPositiveValuesAndZero()
         {
             // arrange
             double number = 0.0;
@@ -750,9 +750,9 @@ namespace MathVectorTest
             result = vector.MultiplyNumber(number);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -760,7 +760,7 @@ namespace MathVectorTest
         /// when all coordinats of vectors are positive.
         /// </summary>
         [TestMethod]
-        public void SumMethodTest1()
+        public void SumMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -785,7 +785,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary
         [TestMethod]
-        public void SumMethodTest2()
+        public void SumMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -810,7 +810,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void SumMethodTest3()
+        public void SumMethodTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -850,9 +850,9 @@ namespace MathVectorTest
             result = vector1.Sum(vector2);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -860,7 +860,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void SubstructionMethodTest1()
+        public void SubstructionMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -885,7 +885,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void SubstructionMethodTest2()
+        public void SubstructionMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -910,7 +910,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void SubstructionMethodTest3()
+        public void SubstructionMethodTestForPositiveValuesAndZeroe()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -950,9 +950,9 @@ namespace MathVectorTest
             result = vector1.Substruction(vector2);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -960,7 +960,7 @@ namespace MathVectorTest
         /// when all coordinates of vectors are positive.
         /// </summary>
         [TestMethod]
-        public void MultiplyMethodTest1()
+        public void MultiplyMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -985,7 +985,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void MultiplyMethodTest2()
+        public void MultiplyMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1010,7 +1010,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void MultiplyMethodTest3()
+        public void MultiplyMethodTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1050,9 +1050,9 @@ namespace MathVectorTest
             result = vector1.Multiply(vector2);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -1060,7 +1060,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void DivisionMethodTest1()
+        public void DivisionMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1085,7 +1085,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void DivisionMethodTest2()
+        public void DivisionMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1112,7 +1112,7 @@ namespace MathVectorTest
         /// <exception cref="DivideByZeroException">Is thrown,
         /// when the second operand of the division operation is zero.</exception>
         [TestMethod]
-        public void DivisionMethodTest3()
+        public void DivisionMethodTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1160,9 +1160,9 @@ namespace MathVectorTest
             result = vector1.Division(vector2);
 
             // assert
-            Assert.AreEqual(result[0], expected[0]);
-            Assert.AreEqual(result[1], expected[1]);
-            Assert.AreEqual(result[2], expected[2]);
+            Assert.AreNotSame(result[0], expected[0]);
+            Assert.AreNotSame(result[1], expected[1]);
+            Assert.AreNotSame(result[2], expected[2]);
         }
 
         /// <summary>
@@ -1170,7 +1170,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void ScalarMultiplyMethodTest1()
+        public void ScalarMultiplyMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1191,7 +1191,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void ScalarMultiplyMethodTest2()
+        public void ScalarMultiplyMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1212,7 +1212,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void ScalarMultiplyMethodTest3()
+        public void ScalarMultiplyMethodTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1246,7 +1246,7 @@ namespace MathVectorTest
             double result = vector1.ScalarMultiply(vector2);
 
             // assert
-            Assert.AreEqual(result, expected);
+            Assert.AreNotSame(result, expected);
         }
 
         /// <summary>
@@ -1254,7 +1254,7 @@ namespace MathVectorTest
         /// when all coordinates are positive.
         /// </summary>
         [TestMethod]
-        public void CalcDistanceMethodTest1()
+        public void CalcDistanceMethodTestForPositiveValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1275,7 +1275,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are negative.
         /// </summary>
         [TestMethod]
-        public void CalcDistanceMethodTest2()
+        public void CalcDistanceMethodTestForPositiveAndNegativeValues()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1296,7 +1296,7 @@ namespace MathVectorTest
         /// when the second vector's coordinates are zeroes.
         /// </summary>
         [TestMethod]
-        public void CalcDistanceMethodTest3()
+        public void CalcDistanceMethodTestForPositiveValuesAndZeroes()
         {
             // arrange
             var vector1 = new MathVector(3);
@@ -1309,7 +1309,7 @@ namespace MathVectorTest
             double result = vector1.CalcDistance(vector2);
 
             // assert
-            Assert.AreEqual(result, expected);
+            Assert.AreNotSame(result, expected);
         }
 
         /// <summary>
@@ -1330,7 +1330,7 @@ namespace MathVectorTest
             double result = vector1.CalcDistance(vector2);
 
             // assert
-            Assert.AreEqual(result, expected);
+            Assert.AreNotSame(result, expected);
         }
     }
 }
