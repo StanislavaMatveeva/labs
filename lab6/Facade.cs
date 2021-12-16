@@ -94,7 +94,10 @@ namespace Core
 
         public Facade AddStudent(Facade facade, Student student, string groupName)
         {
-            student.Id = Students.Max(s => s.Id) + 1;
+            int maxId = 0;
+            try { maxId = Students.Max(s => s.Id); }
+            catch { maxId = 0; }
+            student.Id = maxId + 1;
             student.Name = MakeValidFormatOfName(student.Name);
             if (student.Age < 16 || student.Age > 100)
                 throw new Exception("Wrong value of student's age");
@@ -110,7 +113,10 @@ namespace Core
 
         public Facade AddGroup(Facade facade, Group group)
         {
-            group.Id = Groups.Max(g => g.Id) + 1;
+            int maxId = 0;
+            try { maxId = Groups.Max(g => g.Id); }
+            catch { maxId = 0; }
+            group.Id = maxId + 1;
             if (IsEqualGroupName(group, group.Name))
                 throw new Exception($"Group with name {group.Name} was already recorded");
             group.Name = group.Name.ToUpper();
@@ -122,7 +128,10 @@ namespace Core
 
         public Facade AddCurator(Facade facade, Curator curator, string groupName)
         {
-            curator.Id = Curators.Max(c => c.Id) + 1;
+            int maxId = 0;
+            try { maxId = Curators.Max(c => c.Id); }
+            catch { maxId = 0; }
+            curator.Id = maxId + 1;
             curator.Name = MakeValidFormatOfName(curator.Name);
             if (IsEqualCuratorEmail(curator, curator.Email))
                 throw new Exception("Curator with such email adress was already recorded");
